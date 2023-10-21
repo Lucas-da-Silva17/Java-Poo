@@ -1,7 +1,7 @@
 // import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) throws Exception {
-        String nome = "lucas", profissao= "dev";
+        String nome = "lucas", profissao = "dev";
         Pessoa pessoa = new Pessoa();
 
         pessoa.setid(1);
@@ -31,33 +31,35 @@ public class Principal {
         System.out.println("estado " + pessoa.getestadoCivil());
         System.out.println("data de nascimento " + pessoa.getdata());
 
-
         System.out.println("-----------------------------------------------------------------------");
         System.out.println(pessoa.toString());
 
         System.out.println("----------------------------------------------------------------------- teste agenda");
-   
+        System.out.println(" ");
+
         Agenda agenda = new Agenda();
         Pessoa pessoa2 = new Pessoa(0, "lucas", "123", "321", "sao paulo", "solteiro", "17/07/2001", "dev");
         Pessoa pessoa3 = new Pessoa(0, "ferrari", "123", "321", "sao paulo", "solteiro", "17/07/2001", "medico");
         Pessoa pessoa4 = new Pessoa(0, "luan", "123", "321", "sao paulo", "solteiro", "17/07/2001", "engenheiro");
-   
+
         agenda.adicionarPessoas(pessoa2);
         agenda.adicionarPessoas(pessoa3);
         agenda.adicionarPessoas(pessoa4);
 
-        //   ArrayList<Pessoa> pessoascomprofissao = agenda.buscarProfissao("dev");
-        
+        // ArrayList<Pessoa> pessoascomprofissao = agenda.buscarProfissao("dev");
+
         // if(pessoascomprofissao != null) {
-        //     System.out.println(pessoascomprofissao.toString());
-        // } else { 
-        //     System.out.println("nenhuma pessoa contem essa profissão!");
+        // System.out.println(pessoascomprofissao.toString());
+        // } else {
+        // System.out.println("nenhuma pessoa contem essa profissão!");
         // }
-       
+
         agenda.buscarNome(nome);
         System.out.println("------------busca nome");
+        System.out.println(" ");
+        System.out.println("------------ verifica profissão");
         agenda.buscarProfissao(profissao);
-        System.out.println("------------busca profissao");
+        System.out.println("------------exibir lista de contatos");
         agenda.exibirnome();
     }
 }
